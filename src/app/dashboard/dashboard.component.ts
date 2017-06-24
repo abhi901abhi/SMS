@@ -81,38 +81,25 @@ export class DashboardComponent implements OnInit {
 
 
 
-	sinAndCos() {
-		var p1 = [], p2 = [], p3 = [];
-
-		
-
-		p1 =
-			[{ x: "jan", y: 10 },
-			{ x: "feb", y: 5 }
-			]
-		p2 = [
-			{ x: "jan", y: 2 },
-			{ x: "feb", y: 51 }
-
-		];
-		p3 = [
-			{ x: "jan", y: 30 },
-			{ x: "feb", y: 2 }
-
-		];		
+	sinAndCos() {		
 		//Line chart data should be sent as an array of series objects.
 		return [
 			{
-				"key": "P1",
+				"key": "Lohitha Gardens - 1",
 				values: [{ x: 0, y: 0 }, { x: 1, y: 890 }, { x: 2, y: 38 }, { x: 3, y: 70 }, { x: 4, y: 32 }, { x: 5, y: 0 }, { x: 1, y: 890 }, { x: 6, y: 38 }, { x: 7, y: 70 }, { x: 8, y: 32 }],
 				color: "#c05020"
 			}, {
-				"key": "P2",
+				"key": "Lohitha Gardens - 2",
 				values: [{ x: 0, y: 0 }, { x: 1, y: 200 }, { x: 2, y: 100 }, { x: 3, y: 520 }, { x: 4, y: 133 }, { x: 5, y: 0 }, { x: 1, y: 890 }, { x: 6, y: 38 }, { x: 7, y: 70 }, { x: 8, y: 32 }],
 				color: "#30c020"
 			}, {
-				"key": "P3",
+				"key": "Lahari Resorts - 1",
 				values: [{ x: 0, y: 0 }, { x: 1, y: 390 }, { x: 2, y: 1000 }, { x: 3, y: 200 }, { x: 4, y: 230 }, { x: 5, y: 0 }, { x: 1, y: 890 }, { x: 6, y: 38 }, { x: 7, y: 70 }, { x: 8, y: 32 }],
+				color: "#6060c0"
+			},
+			{
+				"key": "Lahari Resorts - 2",
+				values: [{ x: 0, y: 0 }, { x: 1, y: 22 }, { x: 2, y: 600 }, { x: 3, y: 22 }, { x: 4, y: 23 }, { x: 5, y: 0 }, { x: 1, y: 60 }, { x: 6, y: 38 }, { x: 7, y: 4 }, { x: 8, y: 3 }],
 				color: "#6060c0"
 			}
 		]
