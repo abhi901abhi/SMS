@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { NvD3Component } from 'ng2-nvd3';
 
 
 import { AppComponent } from './app.component';
@@ -30,6 +31,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
+    NvD3Component,
     SidebarComponent,
     NavbarComponent,
     FooterComponent,

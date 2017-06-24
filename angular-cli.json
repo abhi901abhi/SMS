@@ -21,6 +21,7 @@
             "assets/css/material-dashboard.css",
             "assets/css/demo.css",
             "../node_modules/font-awesome/css/font-awesome.css",
+            "../node_modules/nvd3/build/nv.d3.min.css",
             "styles.css"
         ],
         "scripts": [
@@ -29,12 +30,16 @@
             "../node_modules/reflect-metadata/Reflect.js",
             "../node_modules/systemjs/dist/system.src.js",
             "../node_modules/jquery/dist/jquery.min.js",
+            "../node_modules/d3/d3.min.js",
+            "../node_modules/nvd3/build/nv.d3.min.js",
             "assets/js/bootstrap.min.js",
             "assets/js/arrive.min.js",
             "assets/js/material.min.js",
             "assets/js/material-dashboard.js",
             "assets/js/chartist.min.js",
-            "assets/js/bootstrap-notify.js"
+            "assets/js/bootstrap-notify.js",
+            "assets/js/counter.js"
+
         ],
         "environments": {
             "source": "environments/environment.ts",

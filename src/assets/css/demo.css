@@ -89,3 +89,7 @@ my-app .main-panel .main-content .card{
 .tim-row h3{
     margin-top: 0;
 }
+
+.bold{
+    font-weight: bold;
+}
