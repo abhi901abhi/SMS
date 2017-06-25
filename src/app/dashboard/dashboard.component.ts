@@ -16,7 +16,6 @@ export class DashboardComponent implements OnInit {
 		var format = function(n) {
 
 			var map = {
-				0: '0',
 				1: 'jan',
 				2: 'feb',
 				3: 'mar',
@@ -26,9 +25,9 @@ export class DashboardComponent implements OnInit {
 				7: 'july',
 				8: 'aug',
 				9: 'sep',
-				10: 'sep',
-				11: 'sep',
-				12: 'sep'
+				10: 'oct',
+				11: 'nov',
+				12: 'dec'
 
 			};
 
@@ -86,20 +85,20 @@ export class DashboardComponent implements OnInit {
 		return [
 			{
 				"key": "Lohitha Gardens - 1",
-				values: [{ x: 0, y: 0 }, { x: 1, y: 890 }, { x: 2, y: 38 }, { x: 3, y: 70 }, { x: 4, y: 32 }, { x: 5, y: 0 }, { x: 1, y: 890 }, { x: 6, y: 38 }, { x: 7, y: 70 }, { x: 8, y: 32 }],
+				values: [ { x: 1, y: 890 }, { x: 2, y: 38 }, { x: 3, y: 70 }, { x: 4, y: 32 }, { x: 5, y: 0 }, { x: 6, y: 38 }, { x: 7, y: 70 }, { x: 8, y: 32 }, { x: 9, y: 32 }, { x: 10, y: 32 }, { x: 11, y: 32 }, { x: 12, y: 32 }],
 				color: "#c05020"
 			}, {
 				"key": "Lohitha Gardens - 2",
-				values: [{ x: 0, y: 0 }, { x: 1, y: 200 }, { x: 2, y: 100 }, { x: 3, y: 520 }, { x: 4, y: 133 }, { x: 5, y: 0 }, { x: 1, y: 890 }, { x: 6, y: 38 }, { x: 7, y: 70 }, { x: 8, y: 32 }],
+				values: [ { x: 1, y: 200 }, { x: 2, y: 100 }, { x: 3, y: 520 }, { x: 4, y: 133 }, { x: 5, y: 0 }, { x: 6, y: 38 }, { x: 7, y: 70 }, { x: 8, y: 32 }, { x: 9, y: 32 }, { x: 10, y: 32 }, { x: 11, y: 32 }, { x: 12, y: 32 }],
 				color: "#30c020"
 			}, {
 				"key": "Lahari Resorts - 1",
-				values: [{ x: 0, y: 0 }, { x: 1, y: 390 }, { x: 2, y: 1000 }, { x: 3, y: 200 }, { x: 4, y: 230 }, { x: 5, y: 0 }, { x: 1, y: 890 }, { x: 6, y: 38 }, { x: 7, y: 70 }, { x: 8, y: 32 }],
+				values: [ { x: 1, y: 390 }, { x: 2, y: 1000 }, { x: 3, y: 200 }, { x: 4, y: 230 }, { x: 5, y: 0 }, { x: 6, y: 38 }, { x: 7, y: 70 }, { x: 8, y: 32 }, { x: 9, y: 32 }, { x: 10, y: 32 }, { x: 11, y: 32 }, { x: 12, y: 32 }],
 				color: "#6060c0"
 			},
 			{
 				"key": "Lahari Resorts - 2",
-				values: [{ x: 0, y: 0 }, { x: 1, y: 22 }, { x: 2, y: 600 }, { x: 3, y: 22 }, { x: 4, y: 23 }, { x: 5, y: 0 }, { x: 1, y: 60 }, { x: 6, y: 38 }, { x: 7, y: 4 }, { x: 8, y: 3 }],
+				values: [ { x: 1, y: 22 }, { x: 2, y: 600 }, { x: 3, y: 22 }, { x: 4, y: 23 }, { x: 5, y: 0 }, { x: 6, y: 38 }, { x: 7, y: 4 }, { x: 8, y: 3 }, { x: 9, y: 32 }, { x: 10, y: 32 }, { x: 11, y: 32 }, { x: 12, y: 32 }],
 				color: "#6060c0"
 			}
 		]
