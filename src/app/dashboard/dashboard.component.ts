@@ -11,29 +11,9 @@ export class DashboardComponent implements OnInit {
 	data;
 	chartType;
 
+	
+
 	ngOnInit() {
-
-		var format = function(n) {
-
-			var map = {
-				1: 'jan',
-				2: 'feb',
-				3: 'mar',
-				4: 'apr',
-				5: 'may',
-				6: 'june',
-				7: 'july',
-				8: 'aug',
-				9: 'sep',
-				10: 'oct',
-				11: 'nov',
-				12: 'dec'
-
-			};
-
-			return map[n];
-		}
-
 		this.options = {
 			chart: {
 				type: 'lineChart',
@@ -61,7 +41,7 @@ export class DashboardComponent implements OnInit {
 				xAxis: {
 
 					axisLabel: 'Months',
-					tickFormat: format
+					tickFormat: this.format
 
 
 				},
@@ -73,14 +53,34 @@ export class DashboardComponent implements OnInit {
 				}
 			}
 		};
-
-		this.data = this.sinAndCos();
+		this.data = this.getChartData();		
 	}
 
 
 
 
-	sinAndCos() {		
+ format =function(n) {
+
+	var map = {
+		1: 'jan',
+		2: 'feb',
+		3: 'mar',
+		4: 'apr',
+		5: 'may',
+		6: 'june',
+		7: 'july',
+		8: 'aug',
+		9: 'sep',
+		10: 'oct',
+		11: 'nov',
+		12: 'dec'
+
+	};
+
+	return map[n];
+}
+
+	getChartData() {		
 		//Line chart data should be sent as an array of series objects.
 		return [
 			{

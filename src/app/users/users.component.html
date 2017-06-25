@@ -1,5 +1,14 @@
 <div class="main-content">
     <div class="container-fluid">
+        <!--***************** ng smart table ***************** -->
+        <div class="row">
+            <div class="card">
+                <div class="card-content  table-responsive">
+                Records Count : {{dataSource.length}}
+                    <ng2-smart-table [settings]="settings" [source]="dataSource"></ng2-smart-table>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
@@ -56,11 +65,9 @@
                                 </tr>
                             </tbody>
                         </table>
-
                     </div>
                 </div>
             </div>
-
             <div class="col-md-12">
                 <div class="card card-plain">
                     <div class="card-header" data-background-color="red">

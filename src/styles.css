@@ -1,2 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons');
+html {
+    font-size: 14px !important;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4 {
+    font-family: "Helvetica", "Arial", sans-serif;
+}
+
+ng2-smart-table table > thead > tr.ng2-smart-titles {
+    background: linear-gradient(60deg, #ef5350, #e53935);
+    box-shadow: 0 12px 20px -10px rgba(244, 67, 54, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(244, 67, 54, 0.2);
+}
+
+ng2-smart-table table > thead > tr.ng2-smart-titles a {
+    color: white;
+}
+
+ng2-smart-table table > thead > tr > th,
+ng2-smart-table table > tbody > tr > th,
+ng2-smart-table table > tfoot > tr > th,
+ng2-smart-table table > thead > tr > td,
+ng2-smart-table table > tbody > tr > td,
+ng2-smart-table table > tfoot > tr > td {
+    border: 1px solid #ddd;
+}

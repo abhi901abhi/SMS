@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { NvD3Component } from 'ng2-nvd3';
+import { Ng2SmartTableModule } from 'ng2-smart-table';
 
 
 import { AppComponent } from './app.component';
@@ -42,6 +43,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
+    Ng2SmartTableModule,
     RouterModule.forRoot(appRoutes)
 
   ],
