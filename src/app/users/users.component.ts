@@ -13,6 +13,9 @@ export class UsersComponent implements OnInit {
 	dataSource;
 	heroes: Hero[];
 	selectedHero: Hero;
+	rowSelectedClass: string;
+	selectedRowIndex: Number;
+
 
 	constructor(private heroService: HeroService) {
 		this.dataSource = [
@@ -53,12 +56,18 @@ export class UsersComponent implements OnInit {
 			}
 		}
 	};
+	setClickedRow(hero,index)
+	{
+		this.selectedRowIndex = index;
+		this.selectedHero = hero;
+
+	}
 	getHeroes(): void {
-		debugger;
 		this.heroService
 			.getHeroes()
 			.then(heroes => this.heroes = heroes);
 	}
+
 	ngOnInit() {
 		this.getHeroes();
 	}

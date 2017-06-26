@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 // Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './in-memory-data.service';
+import { InMemoryDataService } from './services/MockServices/in-memory-data.service';
 
 
 import { NvD3Component } from 'ng2-nvd3';
@@ -39,7 +39,7 @@ import { UsersComponent } from './users/users.component';
     FormsModule,
     HttpModule,
     Ng2SmartTableModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 3000 }),
+    InMemoryWebApiModule.forRoot(InMemoryDataService, { delay: 50 }),
     AppRoutingModule
 
   ],

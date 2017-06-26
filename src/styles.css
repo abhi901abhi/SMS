@@ -6,7 +6,7 @@ html {
 }
 
 ng2-smart-table table > thead > tr.ng2-smart-titles {
-    background: linear-gradient(60deg, #ef5350, #e53935);
+    background: purple;
     box-shadow: 0 12px 20px -10px rgba(244, 67, 54, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(244, 67, 54, 0.2);
 }
 
@@ -23,3 +23,19 @@ ng2-smart-table table > tfoot > tr > td {
     border: 1px solid #ddd;
     color:black;
 }
+
+.sidebar[data-color="red"] .moving-tab, .off-canvas-sidebar[data-color="red"] .moving-tab {
+    background-color: purple;
+}
+.card [data-background-color="purple"] {
+    background: purple;
+    }
+
+.activeRow{
+   background-color:#d1a3d1 !important;
+  color: white;
+}
+
+  .cursor-pointer{
+  	cursor: pointer;
+  }

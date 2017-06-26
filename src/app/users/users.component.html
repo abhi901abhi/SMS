@@ -12,57 +12,47 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header" data-background-color="red">
+                    <!-- <div class="card-header" data-background-color="purple">
                         <h4 class="title">Simple Table</h4>
-                        <p class="category">Here is a subtitle for this table</p>
-                    </div>
+                        <span class="category">Here is a subtitle for this table</span>
+                        <button class="btn btn-sm btn-info" >+Add</button>
+                        <button class="btn btn-sm btn-info"  [disabled]="!selectedHero">~Edit</button>
+                        <button class="btn btn-sm btn-danger" [disabled]="!selectedHero">-Delete</button> 
+                    </div> -->
                     <div class="card-content table-responsive">
-                        <table class="table">
+
+                    <div class="pull-right">
+                            
+                            <button class="btn btn-sm btn-info" >+Add</button>
+                        <button class="btn btn-sm btn-info"  [disabled]="!selectedHero">~Edit</button>
+                        <button class="btn btn-sm btn-danger" [disabled]="!selectedHero">-Delete</button> 
+
+                    </div>
+                   <span *ngIf="selectedHero">Selected Record = {{selectedHero.name}}</span> 
+                        <table class="table table-hover table-condensed table-bordered">
                             <thead class="text-danger">
                                 <tr>
+                                    <th>Id</th>
                                     <th>Name</th>
-                                    <th>Country</th>
-                                    <th>City</th>
-                                    <th>Salary</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr *ngFor="let hero of heroes" >
+                                <!-- <tr *ngFor="let x of [1,2,3]; let i = index" 
+                                    (click)="setClickedRow(i)" 
+                                     [ngClass] = "{activeRow: i == selectedRowIndex}">
+                                    <td>{{x}}</td>
+                                    <td>{{x}}</td>
+                                </tr>   -->
+                                    <!-- [class.activeRow]="i == selectedRowIndex"> -->
+
+                                <tr *ngFor="let hero of heroes; let i = index" 
+                                    (click)="setClickedRow(hero,i)"  
+                                    class='cursor-pointer'
+                                     [ngClass] = "{'activeRow': i == selectedRowIndex}"
+                                >
+                                    <td>{{hero.id}}</td>
                                     <td>{{hero.name}}</td>
-                                    <td>Niger</td>
-                                    <td>Oud-Turnhout</td>
-                                    <td class="text-danger">$36,738</td>
-                                </tr>
-                               <!--  <tr>
-                                    <td>Minerva Hooper</td>
-                                    <td>Curaçao</td>
-                                    <td>Sinaai-Waas</td>
-                                    <td class="text-danger">$23,789</td>
-                                </tr>
-                                <tr>
-                                    <td>Sage Rodriguez</td>
-                                    <td>Netherlands</td>
-                                    <td>Baileux</td>
-                                    <td class="text-danger">$56,142</td>
-                                </tr>
-                                <tr>
-                                    <td>Philip Chaney</td>
-                                    <td>Korea, South</td>
-                                    <td>Overland Park</td>
-                                    <td class="text-danger">$38,735</td>
-                                </tr>
-                                <tr>
-                                    <td>Doris Greene</td>
-                                    <td>Malawi</td>
-                                    <td>Feldkirchen in Kärnten</td>
-                                    <td class="text-danger">$63,542</td>
-                                </tr>
-                                <tr>
-                                    <td>Mason Porter</td>
-                                    <td>Chile</td>
-                                    <td>Gloucester</td>
-                                    <td class="text-danger">$78,615</td>
-                                </tr> -->
+                                </tr>                               
                             </tbody>
                         </table>
                     </div>
