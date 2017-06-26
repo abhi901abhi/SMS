@@ -2,21 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons');
 html {
-    font-size: 14px !important;
-}
-
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4 {
-    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 16px !important;
 }
 
 ng2-smart-table table > thead > tr.ng2-smart-titles {
@@ -35,4 +21,5 @@ ng2-smart-table table > thead > tr > td,
 ng2-smart-table table > tbody > tr > td,
 ng2-smart-table table > tfoot > tr > td {
     border: 1px solid #ddd;
+    color:black;
 }

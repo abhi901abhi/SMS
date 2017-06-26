@@ -27,13 +27,13 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Dakota Rice</td>
+                                <tr *ngFor="let hero of heroes" >
+                                    <td>{{hero.name}}</td>
                                     <td>Niger</td>
                                     <td>Oud-Turnhout</td>
                                     <td class="text-danger">$36,738</td>
                                 </tr>
-                                <tr>
+                               <!--  <tr>
                                     <td>Minerva Hooper</td>
                                     <td>Curaçao</td>
                                     <td>Sinaai-Waas</td>
@@ -62,7 +62,7 @@
                                     <td>Chile</td>
                                     <td>Gloucester</td>
                                     <td class="text-danger">$78,615</td>
-                                </tr>
+                                </tr> -->
                             </tbody>
                         </table>
                     </div>
