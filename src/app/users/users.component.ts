@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 import { Hero } from '../services/MockServices/Heroes/hero';
 import { HeroService } from '../services/MockServices/Heroes/hero.service';
@@ -10,6 +12,7 @@ import { HeroService } from '../services/MockServices/Heroes/hero.service';
 	providers: [HeroService]
 })
 export class UsersComponent implements OnInit {
+
 	dataSource;
 	heroes: Hero[];
 	selectedHero: Hero;
@@ -17,7 +20,7 @@ export class UsersComponent implements OnInit {
 	selectedRowIndex: Number;
 
 
-	constructor(private heroService: HeroService) {
+	constructor(private router:Router,private heroService: HeroService) {
 		this.dataSource = [
 			{
 				id: 1,
@@ -61,6 +64,10 @@ export class UsersComponent implements OnInit {
 		this.selectedRowIndex = index;
 		this.selectedHero = hero;
 
+	}
+	add() {
+		debugger;
+		this.router.navigate(['/dashboard']);
 	}
 	getHeroes(): void {
 		this.heroService

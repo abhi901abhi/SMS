@@ -21,21 +21,38 @@ ng2-smart-table table > thead > tr > td,
 ng2-smart-table table > tbody > tr > td,
 ng2-smart-table table > tfoot > tr > td {
     border: 1px solid #ddd;
-    color:black;
+    color: black;
 }
 
-.sidebar[data-color="red"] .moving-tab, .off-canvas-sidebar[data-color="red"] .moving-tab {
+.sidebar[data-color="red"] .moving-tab,
+.off-canvas-sidebar[data-color="red"] .moving-tab {
     background-color: purple;
 }
+
 .card [data-background-color="purple"] {
     background: purple;
-    }
-
-.activeRow{
-   background-color:#d1a3d1 !important;
-  color: white;
 }
 
-  .cursor-pointer{
-  	cursor: pointer;
-  }
+.activeRow {
+    background-color: #d1a3d1 !important;
+    color: white;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999 !important;
+  background-color: grey !important;
+  color: #666666;
+}
+
+input[type=text]:disabled {
+    background: #dddddd;
+}
+
+
+/*/custom css*/
+
