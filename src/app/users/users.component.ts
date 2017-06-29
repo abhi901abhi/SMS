@@ -4,6 +4,9 @@ import { Router } from '@angular/router';
 
 import { Hero } from '../services/MockServices/Heroes/hero';
 import { HeroService } from '../services/MockServices/Heroes/hero.service';
+import { ToastrService } from 'ngx-toastr';
+
+
 
 @Component({
 	selector: 'app-users',
@@ -20,7 +23,9 @@ export class UsersComponent implements OnInit {
 	selectedRowIndex: Number;
 
 
-	constructor(private router:Router,private heroService: HeroService) {
+	constructor(private router: Router,
+		private heroService: HeroService,
+		private toastrService: ToastrService) {
 		this.dataSource = [
 			{
 				id: 1,
@@ -59,21 +64,34 @@ export class UsersComponent implements OnInit {
 			}
 		}
 	};
-	setClickedRow(hero,index)
-	{
+	setClickedRow(hero, index) {
 		this.selectedRowIndex = index;
 		this.selectedHero = hero;
 
 	}
 	add() {
 		debugger;
-		this.router.navigate(['/dashboard']);
+		this.router.navigate(['users/new']);
+	}
+	delete(item) {
+		let id = item.id;
+		this.deleteAHero(id);
 	}
 	getHeroes(): void {
 		this.heroService
 			.getHeroes()
 			.then(heroes => this.heroes = heroes);
 	}
+
+	deleteAHero(id: number): void {
+		this.heroService
+			.delete(id)
+			.then(function (response) {
+				this.toastrService.success('Deleted', 'User Deleted Successfully');
+				this.getHeroes();
+			}.bind(this));
+	}
+
 
 	ngOnInit() {
 		this.getHeroes();

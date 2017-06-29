@@ -4,7 +4,7 @@
         <div class="row">
             <div class="card">
                 <div class="card-content  table-responsive">
-                Records Count : {{dataSource.length}}
+                    Records Count : {{dataSource.length}}
                     <ng2-smart-table [settings]="settings" [source]="dataSource"></ng2-smart-table>
                 </div>
             </div>
@@ -21,14 +21,13 @@
                     </div> -->
                     <div class="card-content table-responsive">
 
-                    <div class="pull-right">
-                            
+                        <div class="pull-right">
                             <button class="btn btn-sm btn-info" (click)="add()">+Add</button>
-                        <button class="btn btn-sm btn-info"  [disabled]="!selectedHero">~Edit</button>
-                        <button class="btn btn-sm btn-danger" [disabled]="!selectedHero">-Delete</button> 
+                            <button class="btn btn-sm btn-info" (click)="edit(selectedHero)" [disabled]="!selectedHero">~Edit</button>
+                            <button class="btn btn-sm btn-danger" (click)="delete(selectedHero)" [disabled]="!selectedHero">-Delete</button>
 
-                    </div>
-                   <span *ngIf="selectedHero">Selected Record = {{selectedHero.name}}</span> 
+                        </div>
+                        <span *ngIf="selectedHero">Selected Record = {{selectedHero.name}}</span>
                         <table class="table table-hover table-condensed table-bordered">
                             <thead class="text-danger">
                                 <tr>
@@ -43,22 +42,18 @@
                                     <td>{{x}}</td>
                                     <td>{{x}}</td>
                                 </tr>   -->
-                                    <!-- [class.activeRow]="i == selectedRowIndex"> -->
+                                <!-- [class.activeRow]="i == selectedRowIndex"> -->
 
-                                <tr *ngFor="let hero of heroes; let i = index" 
-                                    (click)="setClickedRow(hero,i)"  
-                                    class='cursor-pointer'
-                                     [ngClass] = "{'activeRow': i == selectedRowIndex}"
-                                >
+                                <tr *ngFor="let hero of heroes; let i = index" (click)="setClickedRow(hero,i)" class='cursor-pointer' [ngClass]="{'activeRow': i == selectedRowIndex}">
                                     <td>{{hero.id}}</td>
                                     <td>{{hero.name}}</td>
-                                </tr>                               
+                                </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
-            <div class="col-md-12">
+            <!--<div class="col-md-12">
                 <div class="card card-plain">
                     <div class="card-header" data-background-color="red">
                         <h4 class="title">Table on Plain Background</h4>
@@ -122,7 +117,7 @@
                         </table>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
 </div>

@@ -1,0 +1,27 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <h5>Create New User</h5>
+        <div class="row">
+            <form materialize class="col s12" [formGroup]="form" (ngSubmit)="save()">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input placeholder="id" id="id" type="text" class="validate" [(ngModel)]="user.id" formControlName="id" [class.invalid]="form.controls['id'].touched && !form.controls['id'].valid">
+                        <label for="id" [class.active]="user.id" data-error="id is required and needs to contain at least 3 chars">
+                            Id
+                        </label>
+
+                        <br/>
+
+                        <input placeholder="name" id="name" type="text" class="validate" [(ngModel)]="user.name" formControlName="name" [class.invalid]="form.controls['name'].touched && !form.controls['name'].valid">
+                        <label for="name" [class.active]="user.name" data-error="Name is required and needs to contain at least 3 chars">
+                            Name
+                        </label>
+
+                        <br/>
+                        <button (click)="create()">save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

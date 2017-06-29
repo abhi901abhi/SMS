@@ -4,6 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 //App Components
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UsersComponent } from './users/users.component';
+import { UserFormComponent } from './users/user-form/user-form.component';
+
 
 // const routes: Routes = [
 // 	{ path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -15,7 +17,11 @@ import { UsersComponent } from './users/users.component';
 
 const appRoutes: Routes = [
 	{ path: 'dashboard', component: DashboardComponent },
+
 	{ path: 'users', component: UsersComponent },
+	{ path: 'users/new', component: UserFormComponent },
+	{ path: 'users/:id', component: UserFormComponent },
+
 	{ path: '', redirectTo: '/dashboard', pathMatch: 'full' }
 ];
 
